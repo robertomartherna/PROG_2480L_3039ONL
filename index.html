@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>
+			Document
+		</title>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="./css/css.css"/>
+		<link rel="stylesheet" type="text/css" href="./css/w3.css"/>
+		<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+	</head>
+	<body>
+		<div class="w3-container">
+			<div class="w3-row-padding w3-margin-top">
+				<div class="">
+					<div id="chart_div"></div>
+				</div>
+			</div>
+			<div class="w3-row-padding w3-margin-top">
+				<div class="w3-col" style="width:30%">
+					<h2>
+						Agregue una nueva tarea aquí
+					</h2>
+					<form id="formulario">
+						<div class="mb-3 mt-3">
+							<label class="w3-text-blue">
+								<b>
+									Indice
+								</b>
+							</label>
+							<input placeholder="" class="w3-input" type="number" id="indice" required/>
+						</div>
+						<div class="mb-3">
+							<label class="w3-text-blue">
+								<b>
+									Nombre
+								</b>
+							</label>
+							<input placeholder="" class="w3-input" type="text" id="nombre" required/>
+						</div>
+						<div class="mb-3">
+							<label class="w3-text-blue">
+								<b>
+									Duración
+								</b>
+							</label>
+							<input placeholder="" class="w3-input" type="number" id="duracion" required/>
+						</div>
+						<div class="mb-3">
+							<label class="w3-text-blue">
+								<b>
+									Tareas Predecesoras
+								</b>
+							</label>
+							<input placeholder="Ejemplo 1,2,3,4" class="w3-input" type="text" id="perecedera"/>
+						</div>
+						<button type="submit" class="w3-button w3-round-large">
+							Agregar
+						</button>
+					</form>
+				</div>
+				<div class="w3-col" style="width:70%">
+					<div id="chart_div_btn">
+						<table id="tabla" class="w3-table-all w3-striped">
+							<thead>
+								<tr>
+									<th class="w3-center">
+										Índice
+									</th>
+									<th>
+										Nombre
+									</th>
+									<th class="w3-center">
+										Duración
+									</th>
+									<th class="w3-center">
+										Tarea Perecedera
+									</th>
+								</tr>
+							</thead>
+							<tbody id="tabla-body"></tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="./js/chart.js"></script>
+</body>
+</html>
